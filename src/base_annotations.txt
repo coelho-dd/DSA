@@ -1,0 +1,31 @@
+O que é uma estrutura de dados?
+-> Uma estrutura estrutura de dados é uma localização nomeada, que pode ser utilizada para alocar e
+organizar dados. Em outras palavras, é uma estrutura com sua própria lógica, que utilizaremos para
+guardar, manipular e organizar dados específicos.
+
+Exemplos:
+- um array(uma estrutura que possui sua própria lógica, aonde guardamos os dados que desejarmos);
+- uma tabela;
+- uma árvore genealógica;
+(cada uma com sua própria lógica)
+
+
+O que é um algoritmo?
+-> Um algoritmo é a declaração de uma série de instruções que serão necessárias para resolver um
+problema. Um exemplo clássico é: uma receita de bolo(seguimos instrução por instrução para resolver
+o problema de fazer um bolo).
+
+Quando criamos um algoritmo em programação, estamos passando ao computador uma série de instruções
+que serão executadas por ele mesmo, para no fim realizar o problema computacional que for, como
+encontrar o melhor caminho em um aplicativo de GPS, definir qual produto indicar com a maior porcentagem
+de chance de compra de um cliente, etc...
+
+
+Porque aprender Estruturas de Dados e algoritmos?
+-> Dominar esses dois conceitos é algo fundamental para um profissional da área, já que são bases
+para toda a programação que será feita na carreira de um engenheiro de software e profissões similares.
+São disciplinas muito importantes, pois é através dela que conseguimos programar melhor, criar soluções
+melhores para os problemas, criar códigos mais eficientes e diversas outras coisas.
+
+Alguém que trabalha na área de software e não compreende estruturas de dados e algoritmos é um profissional
+incompleto.
