@@ -1,28 +1,26 @@
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-        // stack(pilha) -> Estrutura de dado LIFO(Last In First Out)
-        // essa estrutura representa uma pilha de objetos, aonde só podemos retirar o último objeto colocado nela.
-        // Ou seja, não é possível remover o primeiro elemento de uma pilha, sem antes remover o objeto de "cima".
-        // utiliza métodos push() para adicionar objetos ao topo e pop() para remover objetos do topo.
+        // queue(fila) -> Uma estrutura de dados FIFO(First In First Out). Ela representa uma fila, aonde o primeiro
+        // elemento ao ser inserido, é o primeiro a sair.
 
-        Stack<String> stack = new Stack<>();
+        // dequeue(remover um elemento da fila)
+        // enqueue(adicionar um elemento à fila)
 
-        stack.push("Minecraft");
-        stack.push("Skyrim");
-        stack.push("DOOM");
-        stack.push("Borderlands");
-        stack.push("FFVII");
+        Queue<String> queue = new LinkedList<>(); // Queue é uma interface(não pode ser instanciada) por isso utilizamos
+        // a classe LinkedList que herda de Queue
 
-        System.out.println(stack);
+        queue.offer("Karen"); // método .offer() adiciona elementos ao final da fila
+        queue.offer("Chad");
+        queue.offer("Harold");
+        queue.offer("Steve");
 
-        stack.pop(); // remove o item no topo da pilha(o último elemento do array) e retorna o item
+        System.out.println(queue);
 
-        System.out.println(stack); // sem FFVII
+        queue.poll(); // Removes Karen
 
-        // o método peek() da classe Stack permite visualizar toda a stack no momento atual
-        // o método search() da classe Stack permite procurar um elemento específico dentro da stack, retornando um
-        // valor representando o local aonde se encontra(caso exista na stack) ou -1(caso não exista na stack).
+        System.out.println(queue);
     }
 }
