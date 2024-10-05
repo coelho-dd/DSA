@@ -1,0 +1,42 @@
+================= O que são listas encadeadas
+
+Listas encadeadas -> Uma lista encadeada nada mais é do que uma outra representação da estrutura de lista, já vista no arquivo 'arrays.txt'. Essas listas são diferentes, e não trabalham com índices, ou de forma contígua na memória. Ao invés disso, cada nó(cada elemento da lista na memória) tem um ponteiro para a localização na memória do próximo elemento. Isso significa na prática, que cada elemento está 'linkado' com o outro, não através de índices ou de forma contígua na memória, mas sim com ponteiros. O primeiro elemento de uma lista encadeada é chamado de cabeça, e último nó aponta para None(no caso de Python).
+
+Na verdade, existem 3 tipos de listas encadeadas:
+
+    * Listas encadeadas simples:
+
+        Nessas listas cada nó tem um ponteiro para o próximo, e não podemos voltar no sentido contrário(do segundo nó para o primeiro, por exemplo).
+
+    * Listas duplamente encadeadas:
+
+        Nessas listas, os nós têm ponteiros para o próximo elemento e para o elemento anterior, com exceção do primeiro e do último.
+
+    * Listas encadeadas circulares:
+
+        Nas listas encadeadas circulares, o último nó tem um ponteiro para o primeiro elemento.
+
+================= Desempenho de listas encadeadas
+
+O desempenho das listas encadeadas são o oposto das listas e arrays!
+
+Como as listas encadeadas não trabalham com índices, se quisermos procurar para acessar algum elemento na lista, temos que ir elemento por elemento até encontrarmos o desejado. Isso faz com que a complexidade da procura em uma linked list seja O(n)(linear). Já quando queremos adicionar ou remover algum elemento de uma linked list, temos complexidade O(1). Em constraste com isso, em uma lista, se quisermos acessar um elemento temos complexidade O(1), e se quisermos remover/adicinar algum elemento temos complexidade O(n).
+
+Vamos imaginar dois casos, um onde queremos encontrar algum elemento em uma linked list, e outro onde queremos adicionar um elemento nela.
+
+    Encontrando um elemento:
+        Como já foi mencionado, como linked lists não trabalham com índices, não temos como acessar diretamente o elemento a partir de um código elemento[índice], porque isso não existe nesse caso. Portanto, a única forma de encontrar o elemento desejado é iterando sobre a lista.
+
+    Adicionando um elemento:
+        Se quisermos adicionar algum elemento no meio da lista, a complexidade de tempo é constante pelo seguinte motivo: A única operação que irá ocorrer nesse caso é recalcular os ponteiros referente ao elemento, e não de todos os outros elementos. Observe:
+
+            a -> b -> c -> d -> e, aonde '->' indica o ponteiro.
+
+            Se adicionarmos z entre b e c, temos:
+
+            a -> b -> z -> c -> d -> e
+
+            Ou seja, a única operação realizada foi a inserção de 'z' e o ajuste dos ponteiros relacionados a ele... Mais nada.
+
+        Portanto, nota-se o motivo da complexidade ser O(1).
+

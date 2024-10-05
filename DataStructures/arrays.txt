@@ -1,0 +1,60 @@
+================= Conhecendo os arrays e as Listas
+
+Arrays -> Um array é uma estruta de dados clássica, que existe na maioria das linguagens de programação. Ela é uma estrutura estática, homogênea(pode conter apenas um tipo de dado) e linear. Isso significa que, uma vez definido, deve conter apenas um tipo de dado, a quantidade de elementos definida e ela não se alterará durante a execução do programa.
+
+Listas -> As listas são uma variação do array. Elas são estruturas de mesmo aspecto, porém com características diferentes: São heterogêneas(pode conter mais de um tipo de dado), são dinâmicas e lineares. Ou seja, em uma lista podemos guardar dados de diferentes tipos, seu tamanho pode ser alterado conforme a execução do programa, e seus elementos são dispostos em sequência(assim como arrays).
+    * Listas são comuns em linguagens como Python, que é altamente dinâmica.
+
+
+Índices:
+
+    Tanto arrays quanto listas são estruturas baseadas em índices. Um índice é uma marcação de posição de um elemento x. Temos os marcadores de posições do primeiro elemento, segundo, terceiro, quarto, até o último elemento de um array ou lista. Detalhe importante: Os índices começam sempre pelo 0 e não 1, ou seja, o primeiro elemento tem índice 0, o segundo índice 1, terceiro índice 2, etc. Portanto, se uma lista ou array tem 10 elementos, o último índice será 10 - 1, que é 9.
+
+    O primeiro índice de um array ou lista é muito importante. É ele que serve de indicador para toda a estrutura na memória, já que ambas as estruturas são contíguas(os elementos estão postos de forma sequencial na memória). O primeiro índice tem como nome alternativo "endereço base".
+
+    Exemplo de índices de uma lista/array:
+
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] -> array ou lista com 10 elementos numéricos em sequência
+         0, 1, 2, 3, 4, 5, 6, 7, 8, 9   -> indicação dos índices de cada elemento
+
+
+Multidimensões:
+
+    Tanto um array quanto uma lista podem conter mais de uma dimensão. Um array/lista de uma só dimensão tem esse aspecto:
+
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    Já um array/lista com duas dimensões tem o seguinte aspecto:
+
+        [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+    Note que agora temos alguns arrays dentro de um array maior, ou algumas listas dentro de uma lista maior. Podemos continuar adicionando dimensões, mas é incomum o uso de arrays o listas com mais de duas dimensões.
+
+    Independente do tamanho de dimensões, as células de memória sempre são alocadas de forma contígua na memória do computador, tendo o primeiro índice como endereço base da estrutura.
+
+
+* Vale a pena mencionar o fato de que, qualquer estrutura de dados possui uma série de operações em comum. São elas as operações de inserção e remoção de dados, verificação se a estrutura está vazia, procura de algum dado, etc. Isso significa que há uma similaridade de comportamento entre todas elas, apesar da diferença na lógica de cada uma. *
+
+================= Desempenho de arrays
+
+Arrays possuem um bom desempenho, dependendo da operação que será realizada nele. Se quisermos acessar algum elemento do array, teremos uma algoritmo de complexidade baixa, já que podemos acessar qualquer elemento independente do tamanho do array. Mas agora, se quisermos realizar operações de deletar ou adicionar algum elemento ao array, teremos uma complexidade de tempo alta, variando com o número de elementos do array.
+
+Por exemplo, imaginemos que temos o seguinte array:
+
+    ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
+      0    1    2    3    4    5    6    7    8    9    10
+
+Agora, suponha que queremos adicionar a letra 'z' depois dos elementos 'a' e 'b'. Note que se quisermos fazer isso, terá que haver uma mudança nos índices de cada elemento depois de 'a' e 'b':
+
+    ['a', 'b', 'z', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
+      0    1    2    3    4    5    6    7    8    9    10,  11
+
+Perceba que com a inserção do elemento 'z' no array, todos os outros elementos até o final tiveram que ser "empurrados" uma casa para a direita e seus índices recalculados. Obviamente, com arrays pequenos, essa operação não será tão custosa. Mas imagine com um array com milhões de elementos... Fica fácil de imaginar que eventualmente essa operação fica inviável, ou no mínimo pesado para a manipulação da memória.
+
+================= Criando arrays
+
+No arquivo 'arrays.py' no diretório 'scripts', temos um exemplo de criação de um array na linguagem Python.
+
+================= Finalizando
+
+Por fim, aprendemos nessa seção o que são arrays e listas, quais as diferenças de ambos e como cada uma das duas funcionam em operações específicas!!
