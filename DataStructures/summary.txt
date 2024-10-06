@@ -1,0 +1,70 @@
+=================== Em resumo
+
+Até agora vimos as estruturas de dados mais básicas, que são:
+
+    - Arrays e listas;
+    - Pilhas(stacks);
+    - Filas(queues);
+    - Listas encadeadas(linked lists);
+    - Tabelas Hash(hash tables);
+
+É importante saber o seguinte: Cada estrutura de dado, tanto essas acima quanto outras mais avançadas, são eficientes de acordo com o contexto do programa. Dependendo do programa, uma estrutura de dados pode fazer mais sentido que outras. Esse resumo serve para determinar isso e mais algumas coisas.
+
+=================== Arrays e listas
+
+Os arrays e as listas são as estruturas mais básicas dessa coleção de estruturas de dados. Ambas são lineares, mas possuem diferenças entre si:
+
+    * Arrays:
+        Os arrays são estruturas lineares, indexadas, estáticas e homogêneas. Linear significa que a estrutura dispõe de seus elementos em sequência. Indexadas é uma indicação de que a estrutura trabalha com índices numéricos para discernir entre seus elementos. Estáticas informam que a estrutura de dados não muda seu tamanho durante a execução do programa, e homogêneas são para definir que seus elementos só podem ter um tipo de dado, especificado na declaração do array.
+
+    * Listas:
+        As listsa também são estruturas lineares e indexadas, porém com outras diferenças. Ao invés de listas serem estáticas, são dinâmicas. O que significa que seu tamanho pode alterar de acordo com a execução do programa e da sua necessidade. Por fim, listas não são homogêneas, mas sim heterogêneas, ou seja, podem carregar diferentes tipos de dados na estrutura. De resto, listas e arrays possuem comportamento similares.
+
+
+Onde cada uma das duas estruturas serão mais eficientes:
+
+    * Arrays
+        - Acesso aleatório rápido, já que sua complexidade de acesso a elementos é O(1). 
+        - Uso de memória fixo: Quando sabemos o tamanho exato dos elementos que estarão dentro do array a todo momento. Dessa forma, o uso da memória será mais eficiente do que listas, por exemplo.
+
+    * Listas
+        - Dinâmicas: listas são melhores em caso de não sabermos quantos elementos precisamos utilizar na estrutura.
+
+=================== Stacks
+
+As stacks são estruturas de dados com a propriedade LIFO(Last In First Out). Isso significa que temos um acesso a dados limitado, já que devemos obedecer uma lógica rígida da estrutura. De qualquer forma, são estruturas ainda lineares e indexadas, podendo variar entre homogêneas e heterogêneas, e estática ou dinâmica.
+
+Onde as stacks são mais eficientes para uso?
+
+    - Em situações aonde precisamos de uma simulação de um comportamento de stack(LIFO).
+    - Inserção ou remoção rápida nas extremidades, já que uma stack tem complexidade O(1) para tais operações.
+
+=================== Queues
+
+As queues são estruturas de dados que seguem um padrão FIFO(First In First Out), ou seja, o primeiro a entrar é o primeiro a sair. Isso significa que temos um acesso limitado aos dados, tendo que seguir uma lógica rígida da estrutura. De qualquer forma, as filas ainda seguem o padrão de serem lineares e indexadas, porém podendo variar entre homogêneas e heterogêneas, e dinâmicas ou estáticas.
+
+Onde as queues são mais eficientes?
+
+    - Em caso de situações em que seja necessário a simulação de uma lógica de fila(FIFO).
+    - Igual a stack, em situações onde precisamos de remoções/inserção nas extremidades, já que para isso sua complexidade é O(1).
+
+=================== Linked Lists(listas encadeadas)
+
+A lista encadeada é uma estrutura de dados específica, que não utiliza indexação como forma de discernir entre os elementos e nem a característica sequencial(contígua) na memória. Isso significa que em contrapartida com os arrays e listas, stacks e queues aonde seus elementos estão dispostos um ao lado dos outros na memória, em uma linked list isso não ocorre. Em outras palavras: em uma lista encadeada, seus elementos estão espalhados pela memória. A forma como essa estrutura encontra de ordenar os seus elementos é através de ponteiros, aonde cada elemento recebe o nome de nó, e que cada nó aponta para outro nó, com possíveis exceções ao primeiro e último nó.
+
+Uma lista encadeada pode ser simples, aonde existe apenas a sequência da cabeça(primeiro nó) até o rabo(último nó). Pode também ser duplamente encadeada, onde cada nó tem um ponteiro para seu nó anterior, permitindo percorrer o outro sentido na estrutura. E por fim pode ser circular, aonde o último nó aponta para o primeiro nó.
+
+Onde as linked lists são mais eficientes?
+
+    - Ela é altamente dinâmica, sendo eficiente em situações em que não sabemos quantos elementos serão utilizados no total.
+    - A inserção e remoção de elementos no meio das listas encadeadas são mais eficientes que em arrays ou listas(que nesse caso possuem complexidade O(n)). Essas operações em uma linked list possuem complexidade O(1).
+
+=================== Hash Tables
+
+As hash tables são estruturas de dados um pouco mais complexas, contendo alguns elementos que trabalham em conjunto para funcionar apropriadamente. Nela os elementos são guardados em pares chave/valor, aonde a chave guarda o valor. Uma hash table tem um array implícito funcionando no background. Esse array trabalha em conjunto com a função hash, que é uma função que converte o valor da chave em um valor numérico, para que o array possa alocar em si mesmo o par chave/valor. O valor convertido de chave para um índice numérico é chamado de valor hash.
+
+Onde as hash tables são mais eficientes?
+
+    - As hash tables são a estrutura de dados mais eficientes nas operações de inserção/remoção e procura de dados. Em qualquer uma dessas operações, sua complexidade é constante, ou seja, O(1).
+    - São ideais para guardar dados de forma mais descritiva, graças ao uso de chaves, que podem ser do tipo string.
+    - 
