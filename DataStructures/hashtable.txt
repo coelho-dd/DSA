@@ -1,0 +1,30 @@
+=================== O que são hash tables
+
+Antes de qualquer coisa, devemos entender um conceito chave de tabelas hash: O de pares chave/valor.
+
+-> Um par chave/valor é o que se sugere: Um par aonde a chave aponta para o valor. Um dicionário em Python é um exemplo de uma estrutura de dados com o conceito chave/valor. Observe:
+
+    Dicionário Python:
+
+        di = {'nome': 'Davi', 'idade', 23, 'profissao': 'programador'}
+
+    No exemplo acima, temos uma estrutura de dados com pares chave/valor. Para acessar um valor qualquer da estrutura acima, precisamos de indicar a chave desse valor. Por exemplo, para acessar o valor 'Davi', devemos chamar a chave que o contém, que no caso é 'nome':
+
+        print(di[nome]) # -> Essa linha de código retornará o valor 'Davi'.
+
+    Para entender melhor sobre dicionários, veja o arquivo 'dictionaries.py'.
+
+Portanto, perceba que agora temos uma estrutura de dados que não utiliza necessariamente de índices numéricos, mas sim de índices nomeados. As chaves funcionam exatamente dessa forma: índices nomeados. Na verdade acontece mais por detrás dos panos, que entenderemos a seguir.
+
+
+Hash Tables:
+
+    As hash tables tem um funcionamento diferente do que vimos até agora. Ela funciona com pares chave/valor, aonde armazenamos uma chave, e essa chave contém um valor qualquer. Como já mostramos, um dicionário em Python é uma boa demonstração de uma hash table. 
+
+    Porém, a hash table utiliza um outro conceito importante, chamado de função hash. A função hash é responsável por converter a chave do par chave/valor em um índice numérico. O motivo para isso é que por trás de uma hash table está funcionando um array, e arrays trabalham com índices numéricos. Uma vez convertido a chave para um índice numérico, o array irá guardar o par chave/valor nesse índice.
+
+    Note que agora temos diversos conceitos ao mesmo tempo: Uma hash table, que é uma estrutura linear que lida com pares chave/valor. Uma função hash, para converter a chave do par chave/valor em um índice numérico, e um array "escondido" que irá armazenar o par chave/valor com o valor hash(valor obtido após a conversão de uma chave em um número).
+
+=================== Desempenho das hash tables
+
+A hash table é a estrutura com melhor desempenho, tanto em busca de dados quanto em adição/remoção de dados. Para qualquer uma dessas operações, a complexidade de tempo é constante. Porém, existe uma exceção: Quando ocorrem colisões, a complexidade de tempo pode mudar para O(n). Mas os dicionários Python já lidam com colisões de forma eficiente e automática por debaixo dos panos.
