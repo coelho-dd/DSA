@@ -1,0 +1,81 @@
+================== O que são algoritmos?
+
+Algoritmos -> Os algoritmos nada mais são do que uma coleção de instruções dadas para resolver algum problema específico. Não necessariamente os algoritmos funcionam apenas em computadores. Temos exemplos clássicos de algoritmos fora do mundo da computação, como uma receita por exemplo. Quando queremos cozinhar algo e seguimos uma receita, temos então uma coleção de instruções que nos são fornecidas para resolver um problema, que no caso é preparar um refeição. 
+
+A importânica de algoritmos para um programador se dá pelo fato de que, na maior parte do tempo, ele programará algoritmos que serão utilizados nos programas, assim como escolher estruturas de dados para acompanhar tais algoritmos. Portanto, saber identificar qual algoritmo é melhor do que outro é essencial para um programador, para que o mesmo consiga construir programas eficientes ao problema.
+
+De uma forma um pouco mais formal, podemos definir algoritmos como o seguinte:
+
+    Algoritmos -> São um processo que define um conjunto de passos exatos, não-ambíguos, precisos e finitos, que recebe uma entrada e fornece uma saída de acordo com tais entradas. Esse processo deve sempre fornecer a mesma saída para a mesma entrada, aonde a saída deve ser a correta.
+
+Portanto, nota-se que um algoritmo é um processo de resolução de problema, que recebe dados e fornece a resposta. Tudo isso seguindo um padrão bem definido, preciso e sem ambiguidade.
+
+
+
+================== Analisando algoritmos
+
+Como existem muitas formas de resolver um problema qualquer, como saberemos qual forma(algoritmo) é mais eficiente que o outro? Qual algoritmo é mais rápido? Menos espaçoso? Mais eficiente? Uma boa forma de medir isso é através do tempo de execução(run time) de um algoritmo.
+
+Para testar o tempo de execução de uma algoritmo simples, observe o script em 'intro.py' no diretório 'scripts&code'. Esse script gera o período de tempo levado para executar o algoritmo.
+
+O problema surge do seguinte fato: Toda vez que você executar o script, o resultado do tempo de execução irá variar. Isso acontece por vários motivos: O poder de processamento do computador disponível varia com muita frequência. Se comparar a execução do script em um computador com a execução do mesmo script em outro, também vai variar porque cada computador pode ter um poder de processamento diferente. Sem contar que o mesmo script, escrito em linguagens diferentes, pode ter o tempo de execução diferente já que as linguagens de programação variam em tempo de execução. Portanto, note como analisar a eficiência de um algoritmo pelo seu tempo de execução é ineficiente!
+
+Como a análise de um algoritmo pelo tempo de execução é ineficiente, os cientistas da computação tendem a analisar a eficiência de um algoritmo pelo número de etapas.
+
+Por exemplo, imagine um código de loop simples:
+
+    for in range(1, 6):
+        print(i)
+
+    Esse código possui 5 etapas de execução. Colocando em uma equação matemática para representar o número de passos, temos f(n) = 5. 
+
+    Vamos tornar um algoritmo um pouco mais complexo para o conceito ficar mais claro:
+
+        count = 0
+        for i in range(1, 6):
+            print(i)
+            count += 1
+
+    Agora, o código as seguintes etapas: count = 0(uma etapa) e duas etapas que ocorrerão 5 vezes, ou seja, 2 x 5 = 10. Portanto, nossa equação será f(n) = 1 + 2 x 5 = 11 etapas no total.
+
+    Para deixar nossa equação um pouco mais genérica, faremos a seguinte alteração:
+
+        count = 0
+        for i in range(1, n):
+            print(i)
+            count += 1
+
+    Note que alteramos o segundo argumento da função range() para uma variável 'n'. Com a introdução dessa variável, nossa equação recebe um caráter mais genérico, ficando como: 
+    f(n) = 1 + 2n. Para testar se essa equação é verdadeira, basta substituir n por 5, que é o exemplo anterior. O resultado será 11, assim como o último algoritmo.
+
+    Como fica claro nessa alteração, o número de etapas do algoritmo fica dependente do valor de 'n'. Se n for 5, teremos 11 etapas. Se n for 10, teremos 21 etapas, etc... Uma variável que descreve o número de etapas de um algoritmo é conhecida como TAMANHO DO PROBLEMA. Alterando a nossa equação para ficar mais clara, temos por fim:
+
+        T(n) = 1 + 2n
+
+    
+Porém, com uma equação que descreve o número de etapas, caímos em um problema: Nem sempre é possível determinar de forma exata o número de etapas que um algoritmo executará. Em um algoritmo com muitas condições, por exemplo, fica difícil identificar de antemão qual condição será atendida ou não. Então, ainda não temos uma forma boa de análise de algoritmos, apesar da análise através do número de etapas ser mais eficiente do que a análise de tempo de execução.
+
+A boa notícia para nós cientistas da computação, é que não é necessário saber exatamente o número de etapas de um algoritmo, mas sim apenas uma estimativa da perfomance do algoritmo conforme o tamanho do problema aumenta. Por exemplo, imagine que temos um algoritmo que é executado para cada elemento de uma base de dados pequena, digamos com 30 elementos. Ele com certeza terá uma perfomance aceitável, já que a grande maioria dos algoritmos(mesmo os ineficientes) têm uma boa perfomance com bases de dados pequenas. Agora se aumentarmos nossa base de dados para 500 milhões de elementos, é intuitivo e lógico afirmar que um algoritmo ineficiente não dará conta do recado de forma apropriada. Mas note que não sabemos o número exato do tamanho do problema, apenas o aumentamos no chute em nome do exemplo didático.
+
+Para analisar essa questão da estimativa, vamos pegar nossa equação dos exemplos anteriores T(n) = 1 + 2n:
+
+    Vamos também utilizar o exemplo didático dado logo acima, e comparar os resultados.
+
+    Suponha que essa equação seja utilizada em uma base de dados para 30 pessoas. Então teremos: 
+
+        T(30) = 1 + 2 x 30
+        T(30) = 61
+
+    Então, quando o tamanho do problema for 30, nosso algoritmo executa 61 operações.
+
+    Analisaremos, então, a segunda situação quando nosso tamanho do problema é meio milhão:
+
+        T(500.000.000) = 1 + 2 x 500.000.000
+        T(500.000.000) = 1.000.000.001
+
+    Isso nos informa que quando o tamanho do problema for meio milhão, nosso algoritmo executará um bilhão e um operações.
+
+Perceba que, para fazer uma estimativa da eficiência do algoritmo poderíamos 'ignorar' uma parte da equação. A magnitude de 1 bilhão faz com que 1 se torne irrelevante. Essa é a essência da análise de algoritmos: Uma parte da equação referente ao número de etapas, ofusca outra parte. A constante 1 se torna irrelevante para avaliar se aquele algoritmo será eficiente na execução de 1 bilhão de operações, fazendo com que seja possível ignora-lo e realizar uma estimativa. A parte importante de um algoritmo é a que cresce consideravelmente à medida que n aumenta.
+
+Existe uma notação utilizada na ciência da computação para considerar apenas a parte relevante da análise do algoritmo: Big O Notation. Ela é utilizada ao invés de uma notação T(n), já que a segunda ainda conta a parte irrelevante da análise do algoritmo. Portanto, a notação Big O é a descrição de como os requisitos de tempo(ou espaço) de um algoritmo aumentam conforme o tamanho do problema aumenta.
+

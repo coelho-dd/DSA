@@ -1,0 +1,23 @@
+================= O que são filas(queues)?
+
+Filas(Queues) -> Assim como pilhas, filas também simulam uma estrutura do mundo real, que nesse caso são filas. Filas seguem o seguinte padrão: o primeiro a chegar é o primeiro a sair. Com isso, queues são conhecidas como estruturas FIFO(First In First Out), ou seja, o primeiro elemento é o primeiro a sair. Elas funcionam exatamente como pilhas, com a difererença de ordem.
+
+-> Elas também são estruturas de dados lineares, ou seja, os seus elementos são dispostos de forma contígua.
+
+Imagine que temos o seguinte array:
+
+    ['davi', 'nayara', 'liara', 'cristiane', 'daniel']
+
+Agora, imagine que queremos realizar algum tipo de operação com 'daniel'. Para que isso seja possível, devemos passar elemento por elemento, até que o nosso array esteja como:
+
+    ['daniel']
+
+Do contrário, a estrutura de fila não seria respeitada e portanto não teríamos uma.
+
+-> As filas, assim como as pilhas, são estruturas de dados de acesso limitado ou seja, a estrutura nos força a lidar com os elementos em uma ordem específica(nesse caso do começo até o final).
+
+================== Desempenho de filas
+
+O desempenho de filas segue o mesmo padrão que o desempenho de pilhas: As operações de inserção e remoção de elementos têm complexidade O(1), enquanto a pesquisa de elementos tem complexidade O(n). O motivo disso é que, para remover/inserir elementos à pilha ou fila, modificamos apenas um local, que são as extremidades da estrutura. Em contrapartida, quando precisamos pesquisar algum elemento na estrutura, devemos percorre-la por completo.
+
+Vale a pena mencionar que, se quisermos acessar o primeiro elemento de uma fila, ou o último elemento de uma pilha, temos apenas uma complexidade constante O(1).

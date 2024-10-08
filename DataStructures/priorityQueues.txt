@@ -1,0 +1,17 @@
+===================== O que são priority queues
+
+Fila com prioridades -> Uma priority queue é uma estrutura que adereça algum tipo de valor aos seus elementos, dando prioridades para elementos específicos. Ela não necessariamente segue o conceito FIFO, a não ser que dois ou mais elementos tenham a mesma prioridade.
+
+Por exemplo: Em uma priority queue, aonde os elementos são letras do alfabeto, um valor a cada elemento é o de ordem alfabética. Portanto, será dado uma prioridade aos elementos que vem antes do que os outros na ordem alfabética. Caso tivermos dois elementos de valores iguais, como 'A' e 'A', então será acionada a lógica FIFO.
+
+Observe:
+
+    ['F', 'M', 'A', 'E', 'O', 'P', 'D']
+
+    Nesse array acima, em uma queue normal, a sequência em que os elementos seriam removidos seria a partir de 'F', depois 'M', 'A', até 'D'. Porém, em uma priority queue, um valor será dado a cada elemento, aonde alguns terão uma prioridade maior que outros. Portanto, utilizando uma P.Q., na verdade esse array seria:
+
+    ['A', 'D', 'E', 'F', 'M', 'O', 'P]
+
+    Note que os elementos foram colocados em ordem alfabética.
+
+Um exemplo de priority queue foi dado no arquivo PriorityQueues.java!

@@ -1,0 +1,39 @@
+================== O que são stacks
+
+Stacks -> Stacks, ou pilhas, são estruturas de dados que simulam um comportamento. Esse comportamento no caso é de pilhas de objetos, como por exemplo uma pilha de pratos, livros, jogos, etc. Elas simulam o comportamento de uma pilha do mundo real, aonde o último elemento adicionado à pilha é o primeiro a ser removido. Portanto, carrega o nome LIFO(Last In First Out).
+
+* Stacks são estruturas LIFO! *
+
+-> Elas também são estruturas de dados lineares, ou seja, os seus elementos são dispostos de forma contígua.
+
+Na prática, na programação isso significa que quando queremos remover um elemento de uma stack, só podemos fazer isso removendo o último elemento da lista. Do contrário, não teremos uma stack. Se por exemplo tentarmos remover o primeiro elemento da stack(nesse caso o 'último'), a pilha deveria quebrar.
+
+Por exemplo, imagine que temos o seguinte array representando uma stack:
+
+    ['davi', 'nayara', 'liara', 'cristiane', 'daniel']
+
+O último elemento é 'daniel'. Mas imagine que queremos lidar com o primeiro elemento da lista, ou seja, 'davi'. Para isso, deveremos remover todos os outros elementos antes de 'davi', até que seja possível utiliza-lo, e até que o nosso array esteja assim:
+
+    ['davi']
+
+Agora, poderemos utilizar o nome de interesse.
+
+De novo: Uma stack simula um comportamento de pilha do mundo real, aonde o último elemento adicionado é o primeiro a sair, o penúltimo elemento adicionado é o penúltimo e por aí vai. 
+LIFO(Last In First Out).
+
+
+Uma outra definição que está adjacente ao conceito de pilha, é a seguinte definição: A estrutura de pilha está contida no conceito de estruturas de dados de acesso limitado. Isso significa que para acessar os elementos da estrutura, somos obrigados a seguir uma ordem específica. Por exemplo, não podemos acessar o primeiro elemento da estrutura sem antes remover todos os outros.
+
+================== Pilhas em Python
+
+As pilhas em Python podem ser implementadas de algumas formas diferentes.
+
+É muito comum a criação de classes representando estruturas de dados específicas, e em Python não seria diferente. Isso é útil pelos seguintes motivos: Dentro de uma classe conseguimos encapsular todo o comportamento daquele objeto, definindo métodos personalizados que nos permitem manipular a estrutura da forma como quisermos. Além da criação de classes para representar a estrutura, também existem estruturas já prontas na linguagem. Elas serão mais rápidas que uma estrutura criada manualmente, pois já foram otimizadas à linguagem.
+
+Então, por exemplo, se criarmos uma classe de pilha(ou qualquer outra) sendo que Python já tem uma representação dessa estrutura embutida na linguagem, a nossa versão customizada terá um código menos performático do que a já pronta na linguagem. Isso pode ser significativo quando a quantidade de dados se tornar muito grande. Com poucos dados, todos os códigos tendem a performar da mesma forma.
+
+================== Desempenho de pilhas
+
+O desempenho de filas segue o mesmo padrão que o desempenho de pilhas: As operações de inserção e remoção de elementos têm complexidade O(1), enquanto a pesquisa de elementos tem complexidade O(n). O motivo disso é que, para remover/inserir elementos à pilha ou fila, modificamos apenas um local, que são as extremidades da estrutura. Em contrapartida, quando precisamos pesquisar algum elemento na estrutura, devemos percorre-la por completo.
+
+Vale a pena mencionar que, se quisermos acessar o primeiro elemento de uma fila, ou o último elemento de uma pilha, temos apenas uma complexidade constante O(1).

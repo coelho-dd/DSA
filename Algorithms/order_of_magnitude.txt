@@ -1,0 +1,81 @@
+======================== O que são ordens de grandeza
+
+Como vimos no arquivo de introdução ao conteúdo de algoritmos, os cientistas de computação utilizam notação Big O para lidar com a parte relevante de uma equação T(n). Essa notação cria uma função de ordem de grandeza, a partir de T(n).
+
+Ordem de grandeza -> Em uma função de ordem de grandeza(Big O), utilizamos a parte predominante de T(n), ignorando o resto. Portanto, a ordem de grandeza de um algoritmo é a parte predominante de uma equação T(n).
+
+Quando lidamos com ordens de grandeza de algoritmos, temos um sistema de classificação de ordens de grandeza, onde uma classe é muitas vezes maior ou menor que as outras classes. 
+
+Quanto as classificações, temos as mais utilizadas a seguir(organizadas da mais eficiente para a menos eficiente, em termos de tempo de execução):
+
+    - tempo constante; (mais eficiente)
+    - tempo logarítmico;
+    - tempo linear;
+    - tempo log-linear;
+    - tempo quadrático;
+    - tempo cúbico;
+    - tempo exponencial; (menos eficiente)
+
+A seguir, vamos examinar as peculiaridades de cada ordem de grandeza.
+
+
+
+======================== Tempo constante
+
+-> Um algoritmo é executado em complexidade de tempo constante quando ele executa o mesmo número de etapas, independente do tamanho do problema.
+Notação em Big O: O(1).
+
+Suponhamos que você tenha uma livraria com seus clientes, e fornece um livro grátis para o primeiro cliente do dia. Nesse caso, o seu algoritmo levaria apenas uma etapa para ser executado, independente do número de clientes da sua livraria. Um exemplo desse algoritmo está no módulo 'constant.py'. Note como nesse algoritmo temos uma única instrução, que é a seleção do primeiro cliente, independente do tamanho da lista de clientes. (Para não haver confusão, eu decidi colocar a criação da lista dos clientes em outro módulo, para o usuário não achar que a criação fazia parte do algoritmo)
+
+======================== Tempo logarítmico
+
+-> Um algoritmo é executado em complexidade de tempo logarítmica quando seu tempo de execução cresce de acordo com o logaritmo do tamanho do problema. [O número de etapas em um algoritmo logarítmico cresce mais lentamente, à medida que o conjunto de dados aumenta]
+Notação em Big O: O(log n).
+
+======================== Tempo linear
+
+-> Um algoritmo executado em complexidade linear, cresce de acordo com o tamanho do problema. 
+Notação Big O: O(n).
+
+Vamos utilizar o exemplo da livraria novamente. Agora, pense que ao invés de dar um livro de graça para o primeiro cliente, você quer dar um livro de graça para qualquer cliente que começa com a letra 'B'. Note que para fazer isso, será necessário percorrer por toda a lista de clientes, e verificar a primeira letra do nome de cada um. O algoritmo está representado no arquivo 'linear.py'.
+
+Nesse exemplo fica claro que o número de operações que o algoritmo realizará fica dependente do número de clientes, já que teremos que verificar na lista, cliente por cliente, a primeira letra do seu nome. Portanto, se tivermos 10 clientes, faremos 10 verificações. Se tivermos 100 clientes, faremos 100 verificações. Se tivermos 1.000.000, faremos 1.000.000.
+Ou seja, em outras palavras: A complexidade de tempo do algoritmo cresce de acordo com o tamnho do problema.
+
+======================== Tempo log-linear
+
+-> Os algoritmos de tempo log-linear são uma combinação das complexidades de tempo log e linear. [No geral, algoritmos log-linear dividem grandes bases de dados em partes separadas e as processam separadamente]
+Notação Big O: O(n log n).
+
+======================== Tempo quadrático
+
+-> Um algoritmo tem sua complexidade de tempo quadrática, quando seu desempenho é diretamente proporcional ao tamanho do problema elevado ao quadrado. [Como regra geral, se o seu algoritmo possui um loop aninhado, ele já é automaticamente um algoritmo de no mínimo uma complexidade quadrática]
+Notação Big O: O(n**2).
+
+======================== Tempo cúbico
+
+-> Um algoritmo tem sua complexidade de tempo cúbico quando seu desempenho é diretamente proporcinal ao tamanho do problema elevado ao cubo. [Como regra geral, se o seu algoritmo tem dois loops aninhados, ele já é automaticamente um algoritmo de no mínimo complexidade cúbica]
+Notação Big O: O(n**3).
+
+======================== Tempo exponencial
+
+-> O algoritmo com a pior eficiência é a de tempo exponencial. Esse algoritmo contém uma constante qualquer elevada ao tamanho do problema.
+Notação Big O: O(c**n).
+
+Um bom exemplo de algoritmo exponencial é quando alguém tenta adivinhar uma senha de n algarismos onde os números vão de 0 a 9(10 possibilidades). Nesse caso, teríamos um algoritmo de O(10**n). 
+
+Caso a senha tenha 1 algarismo, teríamos 10 etapas. Se a senha tivesse 2 algarismos, o algoritmo executaria 100 etapas. Com 3 algarismos, 1000 etapas. Com 8 algarismos, 100 milhões de etapas. Com 10 algarismos, 10 bilhões de etapas, etc...
+
+
+[Eis a importância de senhas longas!]
+
+
+
+
+======================== Complexidade de melhor caso vs de pior caso
+
+Quando lidamos com algoritmos, muitas coisas podem influenciar seu desempenho. Por exemplo, imagine que precisamos vasculhar uma lista para encontra algo. Podemos dar a sorte de encontrar o que precisamos no primeiro elemento, tendo o melhor caso possível paro o algoritmo. Assim como também podemos ter o azar de o que precisamos não estar na lista, tendo o pior caso possível para o algoritmo. 
+
+A complexidade de melhor caso é como um algoritmo performa em seu melhor cenário. Já uma complexidade de pior caso é como ele performa no seu pior cenário. Além desses dois, também temos a complexidade de caso médio, que é a performance média do algoritmo no geral. 
+
+É sempre importante, ao analisar algum algoritmo, verificar a performance do mesmo em todos os cenários possíveis, para um melhor entendimento do processo.

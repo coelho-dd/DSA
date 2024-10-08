@@ -1,0 +1,7 @@
+======================== O que é complexidade de espaço
+
+Quando lidamos com computadores, temos que o seu espaço(memória) disponível é um recurso limitado. Para isso, temos conceitos de análise de espaço necessário que um algoritmo utiliza em um sistema computacional.
+
+Os conceitos de análise de complexidade de espaço seguem o mesmo padrão que os conceitos de análise de complexidade de tempo. Podemos representar um algoritmo, por exemplo, que tem uma complexidade de espaço constante O(1). Esse algoritmo é representado no arquivo 'space_complex.py'. Assim como também podemos representar algoritmos com complexidade de espaço linear, etc...
+
+Como na complexidade de tempo, a complexidade de espaço varia de situação para situação. Mas assim como quando consideramos o tempo, a eficiência da complexidade se dá quando temos um algoritmo mais perfomático, usando menos recursos possíveis.

@@ -4,6 +4,7 @@ Antes de começarmos, primiero precisamos definir o que são estruturas de dados
 
 Estruturas de dados -> As estruturas de dados são formas de armazenar dados em um computador, de tal forma que o programador consiga utiliza-los. Em outras palavras, nada mais é do que um armazenamento de dados. Cada uma das estruturas possui sua própria lógica, ou seja, a forma de armazenar, modificar e lidar com os dados varia de estrutura para estrutura. Mas, todas elas possui apenas uma própria função: armazenar dados.
 
+Também é possível pensar na definição de estruturas de dados como a seguinte(mas de forma um pouco mais técnica): Uma localização nomeada que pode ser utilizada para alocar, organizar e manipular dados.
 
 Para as estruturas de dados existem algumas definições interessantes, como por exemplo as definições de lineares e não lineares.
 
@@ -25,6 +26,5 @@ Um outro tipo de definição de estruturas de dados é se são estáticas e din�
     (O fato de uma estrutura de dados não poder ser alterada de tamanho pode ter um impacto negativo na memória do computador, principalmente quando não sabemos de antemão quantos elementos serão guardados pela estrutura. Por exemplo, se definirmos uma estrutura de dados estática que carrega 10 elementos, mas na verdade o programa acaba utilizando 8 elementos, desperdiçamos uma parte da memória. Da mesma forma, se precisarmos de 12 elementos, não poderemos alterar a estrutura atual e deveremos criar outra. Ela funcionará melhor que uma estrutura dinâmica, porém, quando sabemos exatamente quantos elementos iremos ter na estrutura e se não forem alterados em nenhum momento.)
 
     ( De forma análoga, uma estrutura de dados dinâmica, é uma estrutura que irá se adaptar de acordo com a necessidade do programa. Por exemplo, durante a execução do algoritmo, talvez seja necessário a adição ou exclusão de algum item à estrutura. Isso é perfeitamente normal para uma E.D. dinâmica. Ao excluir algum elemento da estrutura, o espaço de memória que carregava aquele dado é liberado para outro uso. Da mesma forma, se é adicionado algum elemento, aloca-se mais um espaço de memória.)
-
 
 Então, agora sabemos o que é uma estrutura de dados, e se ela pode ser linear ou não-linear, e estática ou dinâmica.

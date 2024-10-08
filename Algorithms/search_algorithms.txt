@@ -1,0 +1,70 @@
+======================== O que são algoritmos de busca
+
+Como um programador profissional, teremos que trabalhar com dados a todo momento. Uma das operações mais comuns de se realizar com dados é a busca de algum dado específico em uma base de dados. Essas operações são realizadas com algoritmos de busca, que como o nome nos sugere, é a ferramenta que utilizamos para buscar dados de forma eficiente em grandes bases de dados.
+
+Hoje em dia é incomum que uma linguagem já não tenha embutido em si os algoritmos de busca, através de coisas como funções prontas ou operadores. Mas, independente desse fato, é sim necessário entender o que está acontecendo por debaixo dos panos, e caso precise fazer manualmente, codificar um algoritmo de busca do zero.
+
+De forma geral, temos dois algoritmos de busca principais:
+
+    - Algoritmo de busca linear;
+    - Algorimto de busca binária;
+
+Veremos cada um deles em mais detalhes a seguir.
+
+
+
+======================== Busca linear
+
+-> Talvez o algoritmo mais simples de todos, a busca linear ocorre da seguinte forma: Percorremos a estrutura procurando o elemento alvo. Se a procura encontrar o elemento, ele estará na estrutura. Se o algoritmo terminar sem encontrar, o alvo não estará na estrutura.
+
+Como o algoritmo é pequeno, escreverei a sua representação aqui mesmo:
+
+    def linear_search(l, element):
+        for i in l:
+            if i == element:
+                return True
+        return False    
+    
+Essa função representada acima é um algoritmo de busca linear, onde buscamos um elemento 'element' em uma estrutura de lista 'l'. Note que nessa implementação, a complexidade de tempo do algoritmo aumenta conforme o tamanho do problema, que no caso é o tamanho de l. Quanto maior o número de elementos na lista, maior a quantidade de operações realizadas pelo algoritmo. Portanto, temos um algoritmo de busca com complexidade O(n).
+
+Analisando os casos de melhor e pior cenário, e cenário médio, temos:
+
+    - Melhor cenário: O algoritmo encontra no primeiro elemento o alvo desejado, dando ao algoritmo a complexidade O(1).
+    - Pior cenário: O algoritmo executa toda a busca na estrutura, mas não encontra o alvo, deixando o algoritmo com complexidade O(n).
+    - Cenário médio: Em média o algoritmo executa sua busca em tempo n/2 onde n é o número de elementos da estrutura(que nesse caso é uma lista).
+
+Quando devemos utilizar a busca linear:
+
+    Quando temos um conjunto de dados que não estão ordenados, o algoritmo linear se torna uma opção disponível. Caso tenhamos um conjunto de dados ordenados, a busca binária é mais eficiente, que veremos a seguir.
+
+* CURIOSIDADE: Python já tem um algoritmo de busca linear implementada na linguagem através da palavra-chave 'in'. Exemplo: print(4 in [2, 3, 4, 5, 6, 7]), que printará verdadeiro! *
+
+======================== Busca binária
+
+-> A busca binária é outro algoritmo de busca que podemos utilizar para buscar um elemento, porém, ela só pode ser utilizada quando o conjunto de dados está ordenado(em qualquer ordemo específica). Do contrário, o algoritmo se torna ineficiente.
+
+A busca binária funciona da seguinte forma:
+
+    1- Encontre o elemento do meio da estrutura;
+    2- Compare esse elemento com o elemento alvo;
+    3- Se o elemento central for o elemento procurado, termine o algoritmo;
+    4- Senão, compare se o elemento central é maior ou menor que o alvo;
+    5- Se for maior, descarte todo número menor que o elemento do meio; 
+    6- Se for menor, descarte todo o elemento maior que o elemento do meio; 
+    7- Repita os passos de 1 ao 6 até encontrar o elemento;
+
+Pelo algoritmo acima, conseguimos entender um pouco da eficiência da procura da busca binária. Uma representação do seu código está no arquivo 'binary_search.py'.
+
+Quando utilizar o algoritmo de busca binária?
+
+    O algoritmo de busca binária é um algoritmo de complexidade O(log n), ou seja, logarítmica. Isso significa que quando maior o tamanho do problema, mais eficiente ele se torna. Em comparação com um algoritmo de busca linear em um tamanho do problema de 1 milhão, existe a possibilidade de o linear executar 1 milhão de operações, enquanto o de busca binária executaria no máximo 20 operações. Tremenda diferença.
+
+    Mesmo com conjuntos ordenados de dados pequenos podemos utilizar a busca binária. Porém, dependendo do tamanho do conjunto, pode ser considerado 'overkill' codificar um algoritmo de busca binária, ao invés de um linear.
+
+
+
+======================== Finalizando
+
+Tivemos uma introdução aos algoritmos de busca, onde vimos os algoritmos linear e busca binária. O primeiro é mais utilizado em conjuntos de dados pequenos ou não ordenados. Já o segundo é mais utilizado em conjuntos de dados maiores e ordenados.
+
+Entender como os algoritmos funcionam e quais são, é um passo importante para o aluno da computação. Não há como avançar sem esse conhecimento.
