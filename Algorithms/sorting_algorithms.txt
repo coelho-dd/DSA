@@ -1,0 +1,25 @@
+====================== O que são algoritmos de ordenação(sorting)
+
+Assim como procurar dados é uma operação recorrente na carreira de um cientista da computação(algoritmos de busca), também é muito comum a operação de ordenar os dados de forma significativa. Talvez seja necessário, por exemplo, ordenar uma base de dados numérica do menor para o maior, ou do maior para o menor. Ou talvez seja necessário ordenara uma série de dados sobre livros do maior livro para o menor, ou em ordem alfabética. Enfim, há muitas possíveis ordens nos diversos dados que lidamos em cada problema.
+
+Assim como isso foi verdadeiro com algoritmos de busca, também é verdadeiro com os de ordenação: Já existem ferramentas prontas nas linguagens de programação de hoje em dia, que permitem realizar as tarefas de ordenação dos dados. São, inclusive, mais eficientes em todos os sentidos do que codificar um algoritmo do zero. Porém, não podemos negar a possibilidade de aprender a codificar um algoritmo do zero. Esse conhecimento é muito importante para abstrair.
+
+====================== Ordenação por bolha(bubble sort)
+
+-> O algoritmo bubble sort funciona da seguinte forma: Ele compara cada número com o número seguinte, para verificar se um é maior do que o outro. Se for o caso, são trocados de posição. Isso ocorre para todos os elementos da estrutura. É chamado de 'bubble sort' porque os números maiores 'flutuam' para o final da estrutura e os menores para o início da lista. Sim, bem besta o nome...
+
+Um exemplo de bubble sort está no arquivo 'bubble_sort.py'.
+
+É possível demonstrar o algoritmo em pseudo-código da seguinte forma:
+
+    1- Verifique se o primeiro item é maior do que o próximo item;
+    2- Se for, troque-os de lugar;
+    3- Senão, compare o número com o próximo item;
+    4- Repita os passos de 1 a 3 até que tenha comparado o item com todos os outros;
+    5- Passe para o próximo item, e repita os passos de 1 a 4, até não ter mais mais nenhum item que não foi comparado na estrutura;
+
+
+Quando utilizar um algoritmo de bubble sort?
+
+    Um algoritmo de bubble sort compara cada elemento de uma estrutura com cada outro elemento da mesma estrutura. Isso significa que, na prática, teremos dois loops aninhados fazendo com que nossa complexidade de tempo seja quadrática: O(n**2). Apesar de bubble sort ser intuitivo e estável(quando chaves nomeadas não são alteradas se tiverem a mesma letra inicial), não é o algoritmo de ordenação mais eficiente, existindo outros mais interessantes para serem utilizados em bases de dados maiores.
+
